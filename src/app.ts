@@ -1,15 +1,11 @@
-(()=>{
- const Var1:string= "Hola";
- const Var2:number= 2;
+const names = ["Alice", "Bob", "Eve"];
 
- const Array1:any= [ Var1, Var2];
+// Contextual typing for function - parameter s inferred to have type string
+names.forEach(function (s) {
+  console.log(s.toUpperCase());
+});
 
- const Array2:[string, number]= [ Var1, Var2]; 
-
- const Array3:number[]= [2,3];
-
- const Array4:Array<string>= ["Hola"];
- 
-
-
-})
+// Contextual typing also applies to arrow functions
+names.forEach((s) => {
+  console.log(s.toUpperCase());
+});
